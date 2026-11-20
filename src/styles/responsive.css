@@ -1,0 +1,145 @@
+@media (max-width: 992px) {
+  .about-photo-strip {
+    gap: 10px;
+    margin: 34px 0 64px;
+  }
+
+  .about-gallery-image {
+    height: 240px;
+  }
+
+  .about-gallery-image-1,
+  .about-gallery-image-5 {
+    height: 210px;
+  }
+
+  .about-gallery-image-3 {
+    height: 280px;
+  }
+
+  .services-scroll-layout {
+    gap: 32px;
+  }
+
+  .grid-2,
+  .programs-grid,
+  .trainers-grid,
+  .pricing-grid,
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .pricing-card.popular {
+    transform: none;
+  }
+  .hero-title {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-logo {
+    margin-left: 24px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-color: var(--bg-dark);
+    flex-direction: column;
+    justify-content: center;
+    transition: var(--transition);
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .grid-2,
+  .programs-grid,
+  .trainers-grid,
+  .pricing-grid,
+  .testimonials-grid,
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .about-section {
+    padding: 60px 0;
+  }
+
+  .about-photo-strip {
+    display: flex;
+    overflow-x: auto;
+    margin: 32px -20px 56px;
+    padding: 8px 20px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .about-gallery-image,
+  .about-gallery-image-1,
+  .about-gallery-image-3,
+  .about-gallery-image-5 {
+    max-width: 300px;
+    transform: none;
+    scroll-snap-align: center;
+  }
+
+  .about-gallery-image {
+    flex: 0 0 66%;
+    height: 270px;
+  }
+
+  .about-gallery-image-1,
+  .about-gallery-image-5 {
+    flex-basis: 54%;
+    height: 230px;
+    transform: translateY(14px);
+  }
+
+  .about-gallery-image-3 {
+    flex-basis: 76%;
+    height: 310px;
+    transform: translateY(-10px);
+  }
+
+  .about-story {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about-story-image {
+    height: min(420px, 80vw);
+  }
+
+  .services-scroll-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .services-visual {
+    top: 84px;
+  }
+
+  .services-visual-frame {
+    aspect-ratio: 16 / 10;
+  }
+
+  .service-item {
+    min-height: 260px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+}

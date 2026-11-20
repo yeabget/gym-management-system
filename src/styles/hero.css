@@ -1,0 +1,108 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  background-color: #121214;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  padding: 0 clamp(16px, 4vw, 64px);
+}
+
+.hero-slideshow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 52%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.hero-slide.active {
+  opacity: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #121214 0%, #121214 38%, rgba(18, 18, 20, 0.82) 52%, rgba(18, 18, 20, 0.12) 76%, transparent 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 650px;
+  width: 48%;
+}
+
+.hero-badge {
+  color: var(--primary-color);
+  font-weight: 700;
+  letter-spacing: 3px;
+  font-size: 14px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.hero-title {
+  font-size: 64px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  color: white;
+}
+.hero-title span {
+  color: var(--primary-color);
+}
+
+.hero-description {
+  font-size: 18px;
+  color: var(--text-muted);
+  margin-bottom: 35px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.hero-buttons .btn {
+  width: 260px;
+  max-width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    min-height: 720px;
+    padding: 340px 20px 50px;
+    align-items: flex-end;
+  }
+
+  .hero-slideshow {
+    left: 0;
+    width: 100%;
+    height: 380px;
+  }
+
+  .hero-overlay {
+    background: linear-gradient(180deg, rgba(18, 18, 20, 0.05) 0%, rgba(18, 18, 20, 0.55) 40%, #121214 380px);
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+}
